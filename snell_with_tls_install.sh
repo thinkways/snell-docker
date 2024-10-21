@@ -73,5 +73,5 @@ HOST_IP=$(curl -s http://checkip.amazonaws.com)
 IP_COUNTRY=$(curl -s http://ipinfo.io/$HOST_IP/country)
 
 # 输出所需信息，包含IP所在国家
-echo "$IP_COUNTRY = snell, $HOST_IP, 8443, psk = $RANDOM_PSK, version = 4, reuse = true, tfo = true, shadow-tls-password=$RANDOM_SHADOW_TLS_PSK, shadow-tls-sni=mp.weixin.qq.com, shadow-tls-version=3"
-echo "请放行防火墙端口8443,$RANDOM_PORT"
+echo "$IP_COUNTRY = snell, $HOST_IP, 443, psk = $RANDOM_PSK, version = 4, reuse = true, tfo = true, shadow-tls-password=$RANDOM_SHADOW_TLS_PSK, shadow-tls-sni=mp.weixin.qq.com, shadow-tls-version=3"
+echo "请放行防火墙端口443,$RANDOM_PORT"
